@@ -31,6 +31,9 @@ public class UserController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("UTF-8");
+		
 		String action = request.getParameter("action");
 		if (action != null && action.equalsIgnoreCase("add")) {
 			request.getRequestDispatcher("/view/user/register.jsp").forward(request, response);
@@ -55,6 +58,9 @@ public class UserController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("UTF-8");
+		
 		User user = new User();
 		user.setId(request.getParameter("id"));
 		user.setName(request.getParameter("name"));
