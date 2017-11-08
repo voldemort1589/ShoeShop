@@ -2,29 +2,26 @@ package model;
 
 public class Customer {
 	private String id;
-	private String name;
 	private String address;
-	private String username;
-	private String password;
-	private String phone;
-	private String email;
 	public Customer(){
 		super();
 	}
-	public Customer(String id, String name, String address, String username, String password, String phone, String email) {
+	public Customer(String id, String address) {
 		super();
 		this.id = id;
-		this.name = name;
 		this.address = address;
-		this.username = username;
-		this.password = password;
-		this.phone = phone;
-		this.email = email;
 	}
-	void register(){
-
+	public String getId() {
+		return id;
 	}
-	void login(){
-		
+	public void setId(String id) {
+		this.id = id;
 	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public void register(){}
 }

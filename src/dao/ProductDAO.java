@@ -4,7 +4,6 @@ import java.util.List;
 
 import model.Product;
 
-
 public interface ProductDAO {
 	public Product insertProduct(Product product);
 	public void updateProduct(Product product);

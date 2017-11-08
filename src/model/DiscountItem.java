@@ -13,7 +13,22 @@ public class DiscountItem {
 		this.product = product;
 		this.discount = discount;
 	}
-	void addItem(){
-		
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public Product getProduct() {
+		return product;
+	}
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	public int getDiscount() {
+		return discount;
+	}
+	public void setDiscount(int discount) {
+		this.discount = discount;
 	}
 }

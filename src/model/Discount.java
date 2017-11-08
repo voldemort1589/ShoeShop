@@ -19,10 +19,34 @@ public class Discount {
 		this.endDate = endDate;
 		this.items = items;
 	}
-	void addDiscount(){
-		
+	public String getId() {
+		return id;
 	}
-	void addItems(){
-		
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getTopic() {
+		return topic;
+	}
+	public void setTopic(String topic) {
+		this.topic = topic;
+	}
+	public String getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+	public String getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+	public List<DiscountItem> getItems() {
+		return items;
+	}
+	public void setItems(List<DiscountItem> items) {
+		this.items = items;
 	}
 }

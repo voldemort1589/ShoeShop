@@ -71,6 +71,4 @@ public class Product {
 	public void setAdder(Employee adder) {
 		this.adder = adder;
 	}
-	
-	
 }
