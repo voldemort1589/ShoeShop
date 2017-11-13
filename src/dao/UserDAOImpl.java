@@ -68,8 +68,8 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public DBObject authenticate(String username, String password) {
 		DBObject query = new BasicDBObject();
-		query.put("_id", username);
-		query.put("_id", password);
+		query.put("username", username);
+		query.put("password", password);
 		return this.collection.findOne(query);
 	}
 

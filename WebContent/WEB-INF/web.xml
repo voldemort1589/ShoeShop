@@ -20,6 +20,15 @@
 		<servlet-name>LoginController</servlet-name>
 		<url-pattern>/Login</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmpLoginController</servlet-name>
+		<servlet-class>controller.EmpLoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpLoginController</servlet-name>
+		<url-pattern>/EmpLogin</url-pattern>
+	</servlet-mapping>
 
 	<display-name>Lab4</display-name>
 	<welcome-file-list>
