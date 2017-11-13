@@ -39,7 +39,7 @@ public class EmpLoginController extends HttpServlet {
 //			return;
 //		}
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/view/employee/login.jsp").forward(request, response);
+		request.getRequestDispatcher("/view/admin/login.jsp").forward(request, response);
 	}
 
 	/**

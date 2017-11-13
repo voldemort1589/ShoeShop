@@ -1,6 +1,6 @@
 package model;
 
-public class Employee extends Account{
+public class Employee extends Account {
 	private String id;
 	private int salary;
 	public Employee(){
