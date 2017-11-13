@@ -55,7 +55,7 @@ public class EmployeeController extends HttpServlet {
 		} else {
 			employees = this.empDAO.getAllUser();
 			request.setAttribute("listUsers", employees);
-			request.getRequestDispatcher("/view/admin/listEmployee.jsp").forward(request, response);
+			request.getRequestDispatcher("/view/admin/employee/list.jsp").forward(request, response);
 		}
 	}
 
