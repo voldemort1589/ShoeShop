@@ -16,7 +16,7 @@ import model.Customer;
 /**
  * Servlet implementation class UserController
  */
-@WebServlet("/CustomerController")
+@WebServlet("/Customer")
 public class CustomerController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CusDAO cusDAO;
@@ -36,11 +36,11 @@ public class CustomerController extends HttpServlet {
 		
 		String action = request.getParameter("action");
 		if (action != null && action.equalsIgnoreCase("add")) {
-			request.getRequestDispatcher("/view/user/register.jsp").forward(request, response);
+			request.getRequestDispatcher("/view/admin/customer/add.jsp").forward(request, response);
 		} else if (action != null && action.equalsIgnoreCase("edit")) {
 			Customer user = this.cusDAO.getUser(request.getParameter("id"));
 			request.setAttribute("user", user);
-			request.getRequestDispatcher("/view/user/editUser.jsp").forward(request, response);
+			request.getRequestDispatcher("/view/admin/customer/edit.jsp").forward(request, response);
 		} else if (action != null && action.equalsIgnoreCase("delete")) {
 			this.cusDAO.deleteUser(request.getParameter("id"));
 			List<Customer> users = this.cusDAO.getAllUser();
@@ -66,6 +66,9 @@ public class CustomerController extends HttpServlet {
 		user.setName(request.getParameter("name"));
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("password"));
+		user.setEmail(request.getParameter("email"));
+		user.setPhone(request.getParameter("phone"));
+		user.setAddress(request.getParameter("address"));
 		if (user.getId() == null) {
 			this.cusDAO.insertUser(user);
 		} else {

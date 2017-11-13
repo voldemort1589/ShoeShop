@@ -39,7 +39,9 @@ public class EmpLoginController extends HttpServlet {
 //			return;
 //		}
 		// TODO Auto-generated method stub
+		request.getSession().getAttribute("message");
 		request.getRequestDispatcher("/view/admin/login.jsp").forward(request, response);
+		request.getSession().removeAttribute("message");
 	}
 
 	/**
@@ -51,9 +53,10 @@ public class EmpLoginController extends HttpServlet {
 		DBObject obj = this.userDAO.authenticate(username, password);
 		if (obj != null) {
 			request.getSession().setAttribute("userSession", UserConverter.toUser(obj));
-			response.sendRedirect(request.getContextPath() + "/User");
+			response.sendRedirect(request.getContextPath() + "/Customer");
 		} else {
-			response.sendRedirect(request.getContextPath() + "/Login");
+			request.getSession().setAttribute("message", "Username หรือ Password ไม่ถูกต้อง");
+			response.sendRedirect(request.getContextPath() + "/EmpLogin");
 		}
 	}
 }

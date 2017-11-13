@@ -145,8 +145,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index.html"><i class="fa fa-circle-o"></i> เพิ่มสินค้า</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/Product?action=add"><i class="fa fa-circle-o"></i> เพิ่มสินค้า</a></li>
+            <li><a href="${pageContext.request.contextPath}/Product"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -157,8 +157,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index.html"><i class="fa fa-circle-o"></i> เพิ่มสมาชิก</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/Customer?action=add"><i class="fa fa-circle-o"></i> เพิ่มสมาชิก</a></li>
+            <li><a href="${pageContext.request.contextPath}/Customer"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -181,8 +181,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index.html"><i class="fa fa-circle-o"></i> เพิ่มโปรโมชัน</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/Discount?action=add"><i class="fa fa-circle-o"></i> เพิ่มโปรโมชัน</a></li>
+            <li><a href="${pageContext.request.contextPath}/Discount"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
       </ul>

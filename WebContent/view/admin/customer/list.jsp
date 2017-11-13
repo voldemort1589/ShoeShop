@@ -21,6 +21,7 @@
           		<tr>
           			<th>#</th>
           			<th>ชื่อ</th>
+          			<th>ที่อยู่</th>
           			<th>Email</th>
           			<th>เบอร์โทร</th>
           			<th>Actions</th>
@@ -31,6 +32,7 @@
           		<tr>
           			<td>1</td>
           			<td>${user.name}</td>
+          			<td>${user.address}</td>
           			<td>${user.email}</td>
           			<td>${user.phone}</td>
           			<td><a href="#">Edit</a> <a href="#">Delete</a></td>
