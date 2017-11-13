@@ -2,14 +2,14 @@ package model;
 import java.util.List;
 public class Order {
 	private String id;
-	private Customer customer;
+	private String customer;
 	private List<ItemLine> orderlist;
 	private int totalPrice;
 	private int status;
 	public Order(){
 		super();
 	}
-	public Order(String id, Customer customer, List<ItemLine> orderlist,
+	public Order(String id, String customer, List<ItemLine> orderlist,
 			int totalPrice, int status) {
 		super();
 		this.id = id;
@@ -24,10 +24,10 @@ public class Order {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Customer getCustomer() {
+	public String getCustomer() {
 		return customer;
 	}
-	public void setCustomer(Customer customer) {
+	public void setCustomer(String customer) {
 		this.customer = customer;
 	}
 	public List<ItemLine> getOrderlist() {
@@ -48,6 +48,5 @@ public class Order {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	public void changeStatus(){}
-	public void printInvoice(){}
+	
 }

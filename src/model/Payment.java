@@ -2,20 +2,23 @@ package model;
 
 public class Payment {
 	private String id;
-	private Order order;
+	private String order;
 	private int amount;
 	private String time;
-	private Customer customer;
+	private String customer;
+	private String bank;
 	public Payment(){
 		super();
 	}
-	public Payment(String id, Order order, int amount, String time, Customer customer) {
+	public Payment(String id, String order, int amount, String time,
+			String customer, String bank) {
 		super();
 		this.id = id;
 		this.order = order;
 		this.amount = amount;
 		this.time = time;
 		this.customer = customer;
+		this.bank = bank;
 	}
 	public String getId() {
 		return id;
@@ -23,10 +26,10 @@ public class Payment {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Order getOrder() {
+	public String getOrder() {
 		return order;
 	}
-	public void setOrder(Order order) {
+	public void setOrder(String order) {
 		this.order = order;
 	}
 	public int getAmount() {
@@ -41,11 +44,16 @@ public class Payment {
 	public void setTime(String time) {
 		this.time = time;
 	}
-	public Customer getCustomer() {
+	public String getCustomer() {
 		return customer;
 	}
-	public void setCustomer(Customer customer) {
+	public void setCustomer(String customer) {
 		this.customer = customer;
 	}
-	public void makePayment(){}
+	public String getBank() {
+		return bank;
+	}
+	public void setBank(String bank) {
+		this.bank = bank;
+	}
 }

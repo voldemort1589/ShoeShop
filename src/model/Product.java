@@ -6,21 +6,22 @@ public class Product {
 	private String color;
 	private int size;
 	private int amount;
-	private int discount;
 	private int price;
-	private Employee adder;
+	private int discount;
+	private String adder;
 	public Product(){
 		super();
 	}
-	public Product(String id, String name, String color, int size, int amount, int discount, int price, Employee adder) {
+	public Product(String id, String name, String color, int size, int amount,
+			int price, int discount, String adder) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.color = color;
 		this.size = size;
 		this.amount = amount;
-		this.discount = discount;
 		this.price = price;
+		this.discount = discount;
 		this.adder = adder;
 	}
 	public String getId() {
@@ -53,22 +54,24 @@ public class Product {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-	public int getDiscount() {
-		return discount;
-	}
-	public void setDiscount(int discount) {
-		this.discount = discount;
-	}
 	public int getPrice() {
 		return price;
 	}
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public Employee getAdder() {
+	public int getDiscount() {
+		return discount;
+	}
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+	public String getAdder() {
 		return adder;
 	}
-	public void setAdder(Employee adder) {
+	public void setAdder(String adder) {
 		this.adder = adder;
 	}
+	
+	
 }
