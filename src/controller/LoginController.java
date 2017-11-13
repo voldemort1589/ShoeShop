@@ -35,7 +35,9 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.getSession().getAttribute("message");
 		request.getRequestDispatcher("/view/user/login.jsp").forward(request, response);
+		request.getSession().removeAttribute("message");
 	}
 
 	/**
@@ -47,8 +49,9 @@ public class LoginController extends HttpServlet {
 		DBObject obj = this.userDAO.authenticate(username, password);
 		if (obj != null) {
 			request.getSession().setAttribute("userSession", UserConverter.toUser(obj));
-			response.sendRedirect(request.getContextPath() + "/User");
+			response.sendRedirect(request.getContextPath() + "/Store");
 		} else {
+			request.getSession().setAttribute("message", "Username หรือ Password ไม่ถูกต้อง");
 			response.sendRedirect(request.getContextPath() + "/Login");
 		}
 	}

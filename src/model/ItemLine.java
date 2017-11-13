@@ -2,13 +2,13 @@ package model;
 
 public class ItemLine {
 	private String id;
-	private Product product;
+	private String product;
 	private int amount;
 	private int total;
 	public ItemLine(){
 		super();
 	}
-	public ItemLine(String id, Product product, int amount, int total) {
+	public ItemLine(String id, String product, int amount, int total) {
 		super();
 		this.id = id;
 		this.product = product;
@@ -21,10 +21,10 @@ public class ItemLine {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Product getProduct() {
+	public String getProduct() {
 		return product;
 	}
-	public void setProduct(Product product) {
+	public void setProduct(String product) {
 		this.product = product;
 	}
 	public int getAmount() {
@@ -39,4 +39,5 @@ public class ItemLine {
 	public void setTotal(int total) {
 		this.total = total;
 	}
+	
 }

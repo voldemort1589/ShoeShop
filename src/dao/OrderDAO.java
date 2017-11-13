@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import model.Order;
 
 public interface OrderDAO {
@@ -7,4 +9,5 @@ public interface OrderDAO {
 	public void updateOrder(Order order);
 	public void deleteOrder(String id);
 	public Order getOrder(String id);
+	public List<Order> getAllOrder();
 }

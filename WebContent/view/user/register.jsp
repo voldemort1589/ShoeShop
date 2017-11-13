@@ -1,32 +1,53 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<form action="User" method="post">
-		<table>
-			<tr>
-				<td>Name:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-			<tr>
-				<td>Username:</td>
-				<td><input type="text" name="username"></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Submit"></td>
-				<td><input type="reset" value="Reset"></td>
-			</tr>
-		</table>
-	</form>
-</body>
-</html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<t:guess>
+  <jsp:attribute name="title">สมัครสมาชิก</jsp:attribute>
+  <jsp:body>
+ <div class="login-box">
+  <div class="login-logo">
+    <a href=""><b>ShoeShop</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">สมัครสมาชิก</p>
+
+    <form action="${pageContext.request.contextPath}/User" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="name" placeholder="Full name">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="username" placeholder="Username">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="passcon" placeholder="Retype password">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> I agree to the <a href="#">terms</a>
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+  </jsp:body>
+</t:guess>

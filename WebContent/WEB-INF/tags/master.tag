@@ -1,4 +1,4 @@
-<%@tag description="Overall Page template" pageEncoding="UTF-8"%>
+<%@tag description="Admin Page template" pageEncoding="UTF-8"%>
 <%@attribute name="title" fragment="true" %>
 <%@attribute name="content" fragment="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,28 +10,28 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/Ionicons/css/ionicons.min.css">
   <!-- daterange picker -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap datepicker -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/iCheck/all.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/plugins/iCheck/all.css">
   <!-- Bootstrap Color Picker -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
   <!-- Bootstrap time Picker -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/timepicker/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/plugins/timepicker/bootstrap-timepicker.min.css">
   <!-- Select2 -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/bower_components/select2/dist/css/select2.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,14 +44,14 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <!-- jQuery 3 -->
-  <script src="${pageContext.request.contextPath}/assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="${pageContext.request.contextPath}/assets/admin/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="${pageContext.request.contextPath}/assets/index2.html" class="logo">
+    <a href="${pageContext.request.contextPath}/assets/admin/index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -72,13 +72,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="${pageContext.request.contextPath}/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="${pageContext.request.contextPath}/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -122,7 +122,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="${pageContext.request.contextPath}/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -145,8 +145,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="${pageContext.request.contextPath}/assets/index.html"><i class="fa fa-circle-o"></i> เพิ่มสินค้า</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index.html"><i class="fa fa-circle-o"></i> เพิ่มสินค้า</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -157,8 +157,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="${pageContext.request.contextPath}/assets/index.html"><i class="fa fa-circle-o"></i> เพิ่มสมาชิก</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index.html"><i class="fa fa-circle-o"></i> เพิ่มสมาชิก</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -169,8 +169,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="${pageContext.request.contextPath}/assets/index.html"><i class="fa fa-circle-o"></i> เพิ่มโปรโมชัน</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index.html"><i class="fa fa-circle-o"></i> เพิ่มโปรโมชัน</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
       </ul>
@@ -213,31 +213,31 @@
 <!-- ./wrapper -->
 
 <!-- Bootstrap 3.3.7 -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Select2 -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
 <!-- InputMask -->
-<script src="${pageContext.request.contextPath}/assets/plugins/input-mask/jquery.inputmask.js"></script>
-<script src="${pageContext.request.contextPath}/assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="${pageContext.request.contextPath}/assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <!-- date-range-picker -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/moment/min/moment.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/moment/min/moment.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap datepicker -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- bootstrap color picker -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
 <!-- bootstrap time picker -->
-<script src="${pageContext.request.contextPath}/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
 <!-- SlimScroll -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- iCheck 1.0.1 -->
-<script src="${pageContext.request.contextPath}/assets/plugins/iCheck/icheck.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/plugins/iCheck/icheck.min.js"></script>
 <!-- FastClick -->
-<script src="${pageContext.request.contextPath}/assets/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="${pageContext.request.contextPath}/assets/dist/js/adminlte.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="${pageContext.request.contextPath}/assets/dist/js/demo.js"></script>
+<script src="${pageContext.request.contextPath}/assets/admin/dist/js/demo.js"></script>
 </body>
 </html>
