@@ -163,6 +163,18 @@
         </li>
         <li class="treeview">
           <a href="#">
+            <i class="fa fa-users"></i> <span>จัดการพนักงาน</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="${pageContext.request.contextPath}/Employee?action=add"><i class="fa fa-circle-o"></i> เพิ่มพนักงาน</a></li>
+            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
             <i class="fa fa-bell"></i> <span>จัดการโปรโมชัน</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

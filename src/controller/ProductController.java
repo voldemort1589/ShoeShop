@@ -9,21 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Employee;
-import dao.EmpDAO;
-import dao.EmpDAOImpl;
+import model.User;
+import dao.UserDAO;
+import dao.UserDAOImpl;
 
 /**
  * Servlet implementation class UserController
  */
-@WebServlet("/Employee")
-public class EmployeeController extends HttpServlet {
+@WebServlet("/Product")
+public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private EmpDAO empDAO;
+	private UserDAO userDAO;
 	
-	public EmployeeController() {
+	public ProductController() {
 		super();
-		this.empDAO = new EmpDAOImpl();
+		this.userDAO = new UserDAOImpl();
 	}
 
 
@@ -39,23 +39,21 @@ public class EmployeeController extends HttpServlet {
 //		}
 		
 		String action = request.getParameter("action");
-		List<Employee> employees = null;
-		Employee employee = null;
 		if (action != null && action.equalsIgnoreCase("add")) {
-			request.getRequestDispatcher("/view/admin/employee/add.jsp").forward(request, response);
+			request.getRequestDispatcher("/view/admin/product/add.jsp").forward(request, response);
 		} else if (action != null && action.equalsIgnoreCase("edit")) {
-			employee = this.empDAO.getUser(request.getParameter("id"));
-			request.setAttribute("user", employee);
-			request.getRequestDispatcher("/view/admin/employee/edit.jsp").forward(request, response);
+			User user = this.userDAO.getUser(request.getParameter("id"));
+			request.setAttribute("user", user);
+			request.getRequestDispatcher("/view/user/editUser.jsp").forward(request, response);
 		} else if (action != null && action.equalsIgnoreCase("delete")) {
-			this.empDAO.deleteUser(request.getParameter("id"));
-			employees = this.empDAO.getAllUser();
-			request.setAttribute("listUsers", employees);
+			this.userDAO.deleteUser(request.getParameter("id"));
+			List<User> users = this.userDAO.getAllUser();
+			request.setAttribute("listUsers", users);
 			response.sendRedirect(request.getContextPath() + "/User");
 		} else {
-			employees = this.empDAO.getAllUser();
-			request.setAttribute("listUsers", employees);
-			request.getRequestDispatcher("/view/admin/listEmployee.jsp").forward(request, response);
+			List<User> users = this.userDAO.getAllUser();
+			request.setAttribute("listUsers", users);
+			request.getRequestDispatcher("/view/admin/product/report.jsp").forward(request, response);
 		}
 	}
 
@@ -67,18 +65,15 @@ public class EmployeeController extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		Employee employee = new Employee();
-		employee.setId(request.getParameter("id"));
-		employee.setName(request.getParameter("name"));
-		employee.setUsername(request.getParameter("username"));
-		employee.setPassword(request.getParameter("password"));
-		employee.setEmail(request.getParameter("email"));
-		employee.setPhone(request.getParameter("phone"));
-		employee.setSalary(Integer.parseInt(request.getParameter("salary")));
-		if (employee.getId() == null) {
-			this.empDAO.insertUser(employee);
+		User user = new User();
+		user.setId(request.getParameter("id"));
+		user.setName(request.getParameter("name"));
+		user.setUsername(request.getParameter("username"));
+		user.setPassword(request.getParameter("password"));
+		if (user.getId() == null) {
+			this.userDAO.insertUser(user);
 		} else {
-			this.empDAO.updateUser(employee);
+			this.userDAO.updateUser(user);
 		}
 		doGet(request, response);
 	}
