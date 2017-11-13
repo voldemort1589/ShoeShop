@@ -25,9 +25,9 @@ public class DiscountConverter {
 		discount.setId(String.valueOf(obj.get("_id")));
 		discount.setTopic(String.valueOf(obj.get("topic")));
 		discount.setProduct(String.valueOf(obj.get("product")));
-		discount.setDiscount(Integer.parseInt(String.valueOf(obj.get("address"))));
-		discount.setStartDate(String.valueOf(obj.get("address")));
-		discount.setEndDate(String.valueOf(obj.get("address")));
+		discount.setDiscount(Integer.parseInt(String.valueOf(obj.get("discount"))));
+		discount.setStartDate(String.valueOf(obj.get("startDate")));
+		discount.setEndDate(String.valueOf(obj.get("endDate")));
 		return discount;
 	}
 }

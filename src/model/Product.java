@@ -72,6 +72,4 @@ public class Product {
 	public void setAdder(String adder) {
 		this.adder = adder;
 	}
-	
-	
 }

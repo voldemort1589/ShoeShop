@@ -73,7 +73,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Kittisak Pimnonthong</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -81,7 +81,7 @@
                 <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  Kittisak Pimnonthong - Web Developer
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -125,7 +125,7 @@
           <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Kittisak Pimnonthong</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -170,7 +170,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="${pageContext.request.contextPath}/Employee?action=add"><i class="fa fa-circle-o"></i> เพิ่มพนักงาน</a></li>
-            <li><a href="${pageContext.request.contextPath}/assets/admin/index2.html"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
+            <li><a href="${pageContext.request.contextPath}/Employee"><i class="fa fa-circle-o"></i> ค้นหา แก้ไข ลบ</a></li>
           </ul>
         </li>
         <li class="treeview">

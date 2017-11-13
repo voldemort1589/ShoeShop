@@ -7,12 +7,11 @@ public class Account {
 	private String password;
 	private String email;
 	private String phone;
-	private boolean isEmployee;
 	public Account(){
 		super();
 	}
 	public Account(String id, String name, String username, String password,
-			String email, String phone, boolean isEmployee) {
+			String email, String phone) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -20,7 +19,6 @@ public class Account {
 		this.password = password;
 		this.email = email;
 		this.phone = phone;
-		this.isEmployee = isEmployee;
 	}
 	public String getId() {
 		return id;
@@ -58,11 +56,4 @@ public class Account {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public boolean getIsEmployee() {
-		return isEmployee;
-	}
-	public void setIsEmployee(boolean isEmployee) {
-		this.isEmployee = isEmployee;
-	}
-	
 }
