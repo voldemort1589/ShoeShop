@@ -35,7 +35,6 @@ public class UserDAOImpl implements UserDAO {
 		DBObject query = new BasicDBObject();
 		query.put("_id", new ObjectId(user.getId()));
 		this.collection.update(query, UserConverter.toDBObject(user));
-		
 	}
 
 	@Override

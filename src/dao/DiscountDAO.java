@@ -10,6 +10,6 @@ public interface DiscountDAO {
 	public void updateDiscount(Discount discount);
 	public void deleteDiscount(String id);
 	public Discount getDiscount(String id);
-	public List<Product> getAllDiscount();
+	public List<Discount> getAllDiscount();
 	public int checkDiscount(String id);
 }

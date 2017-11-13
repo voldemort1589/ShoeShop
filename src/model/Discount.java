@@ -1,17 +1,19 @@
 package model;
 
+import java.util.List;
+
 public class Discount {
 	private String id;
 	private String topic;
-	private String product;
+	private List<Product> product;
 	private int discount;
 	private String startDate;
 	private String endDate;
 	public Discount(){
 		super();
 	}
-	public Discount(String id, String topic, String product, int discount,
-			String startDate, String endDate) {
+	public Discount(String id, String topic, List<Product> product,
+			int discount, String startDate, String endDate) {
 		super();
 		this.id = id;
 		this.topic = topic;
@@ -32,10 +34,10 @@ public class Discount {
 	public void setTopic(String topic) {
 		this.topic = topic;
 	}
-	public String getProduct() {
+	public List<Product> getProduct() {
 		return product;
 	}
-	public void setProduct(String product) {
+	public void setProduct(List<Product> product) {
 		this.product = product;
 	}
 	public int getDiscount() {
@@ -56,5 +58,4 @@ public class Discount {
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
-	
 }

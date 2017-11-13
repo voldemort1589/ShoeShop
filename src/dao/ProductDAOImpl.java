@@ -35,7 +35,6 @@ public class ProductDAOImpl implements ProductDAO{
 		DBObject query = new BasicDBObject();
 		query.put("_id", new ObjectId(product.getId()));
 		this.collection.update(query, ProductConverter.toDBObject(product));
-		
 	}
 
 	@Override
@@ -43,7 +42,6 @@ public class ProductDAOImpl implements ProductDAO{
 		DBObject query = new BasicDBObject();
 		query.put("_id", new ObjectId(id));
 		this.collection.remove(query);
-		
 	}
 
 	@Override
