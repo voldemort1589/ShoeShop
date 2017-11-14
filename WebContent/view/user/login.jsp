@@ -59,6 +59,9 @@
         <div class="col-xs-4">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
+        <div class="col-xs-offset-4 col-xs-4">
+          <a href="${pageContext.request.contextPath}/User?action=add" class="btn btn-default btn-block btn-flat">Register</a>
+        </div>
         <!-- /.col -->
       </div>
     </form>

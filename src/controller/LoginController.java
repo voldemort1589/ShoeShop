@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.mongodb.DBObject;
 
 import converter.UserConverter;
-import dao.UserDAO;
-import dao.UserDAOImpl;
+import dao.CusDAO;
+import dao.CusDAOImpl;
 
 /**
  * Servlet implementation class LoginController
@@ -20,13 +20,13 @@ import dao.UserDAOImpl;
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UserDAO userDAO;   
+	private CusDAO userDAO;   
     /**
      * @see HttpServlet#HttpServlet()
      */
     public LoginController() {
         super();
-        this.userDAO = new UserDAOImpl();
+        this.userDAO = new CusDAOImpl();
         // TODO Auto-generated constructor stub
     }
 
