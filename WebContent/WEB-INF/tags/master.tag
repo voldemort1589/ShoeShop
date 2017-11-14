@@ -133,7 +133,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li>
-          <a href="${pageContext.request.contextPath}/EmployeeController">
+          <a href="${pageContext.request.contextPath}/Product?action=add">
             <i class="fa fa-home"></i> <span>หน้าแรก</span>
           </a>
         </li>

@@ -53,7 +53,7 @@ public class ProductController extends HttpServlet {
 		} else {
 			List<User> users = this.userDAO.getAllUser();
 			request.setAttribute("listUsers", users);
-			request.getRequestDispatcher("/view/admin/product/report.jsp").forward(request, response);
+			request.getRequestDispatcher("/view/admin/product/list.jsp").forward(request, response);
 		}
 	}
 

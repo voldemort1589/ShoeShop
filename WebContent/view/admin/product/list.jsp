@@ -30,18 +30,7 @@
           		</tr>
           	</thead>
           	<tbody>
-          		<tr>
-          			<td>1</td>
-          			<td>ทดสอบ ทดลอง</td>
-          			<td>todsob@gmail.com</td>
-          			<td>0864251023</td>
-          			<td>68000</td>
-          			<td>ทดสอบ ทดลอง</td>
-          			<td>todsob@gmail.com</td>
-          			<td>0864251023</td>
-          			<td>68000</td>
-          			<td><a href="#">Edit</a> <a href="#">Delete</a></td>
-          		</tr>
+
           	</tbody>
           </table>
         </div>
