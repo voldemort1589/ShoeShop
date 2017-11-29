@@ -39,17 +39,23 @@ public class ProductController extends HttpServlet {
 //		}
 		
 		String action = request.getParameter("action");
-		if (action != null && action.equalsIgnoreCase("add")) {
-			request.getRequestDispatcher("/view/admin/product/add.jsp").forward(request, response);
-		} else if (action != null && action.equalsIgnoreCase("edit")) {
-			User user = this.userDAO.getUser(request.getParameter("id"));
-			request.setAttribute("user", user);
-			request.getRequestDispatcher("/view/user/editUser.jsp").forward(request, response);
-		} else if (action != null && action.equalsIgnoreCase("delete")) {
-			this.userDAO.deleteUser(request.getParameter("id"));
-			List<User> users = this.userDAO.getAllUser();
-			request.setAttribute("listUsers", users);
-			response.sendRedirect(request.getContextPath() + "/User");
+		if (action != null) {
+			switch(action) {
+				case "add":
+					request.getRequestDispatcher("/view/admin/product/add.jsp").forward(request, response);
+					break;
+				case "edit":
+					User user = this.userDAO.getUser(request.getParameter("id"));
+					request.setAttribute("user", user);
+					request.getRequestDispatcher("/view/user/editUser.jsp").forward(request, response);
+					break;
+				case "delete":
+					this.userDAO.deleteUser(request.getParameter("id"));
+					List<User> users = this.userDAO.getAllUser();
+					request.setAttribute("listUsers", users);
+					response.sendRedirect(request.getContextPath() + "/User");
+					break;
+			}	
 		} else {
 			List<User> users = this.userDAO.getAllUser();
 			request.setAttribute("listUsers", users);

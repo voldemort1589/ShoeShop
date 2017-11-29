@@ -35,17 +35,17 @@ public class OrderConverter {
 		return order;
 	}
 	public static List<ItemLine> toList(DBObject obj){
-		List<ItemLine> order = new ArrayList<ItemLine>();
-		BasicDBList orderlist = (BasicDBList) obj.get("orderlist");
-		for (int i=0; i<orderlist.size(); i++){
+		List<ItemLine> itemLine = new ArrayList<ItemLine>();
+		BasicDBList itemList = (BasicDBList) obj.get("orderlist");
+		for (int i=0; i<itemList.size(); i++){
 			ItemLine item = new ItemLine();
-			BasicDBObject orderObj = (BasicDBObject) orderlist.get(i);
-			item.setId(orderObj.getString("id"));
-			item.setProduct(orderObj.getString("product"));
-			item.setAmount(orderObj.getInt("amount"));
-			item.setTotal(orderObj.getInt("total"));
-			order.add(item);
+			BasicDBObject itemObj = (BasicDBObject) itemList.get(i);
+			item.setId(itemObj.getString("id"));
+			item.setProduct(itemObj.getString("product"));
+			item.setAmount(itemObj.getInt("amount"));
+			item.setTotal(itemObj.getInt("total"));
+			itemLine.add(item);
 		}
-		return order;
+		return itemLine;
 	}
 }
