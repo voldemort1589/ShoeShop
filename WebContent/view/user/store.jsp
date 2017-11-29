@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <t:store>
@@ -79,126 +80,29 @@
             
                 <!-- BEGIN row -->
                 <div class="row row-space-10">
+                	<c:forEach var="product" items="${listProducts}">
                     <!-- BEGIN col-2 -->
                     <div class="col-md-2 col-sm-4">
                         <!-- BEGIN item -->
                         <div class="item item-thumbnail">
                             <a href="${pageContext.request.contextPath}/Store?action=show" class="item-image">
-                                <img src="${pageContext.request.contextPath}/assets/img/iphone.png" alt="" />
+                                <img src="${pageContext.request.contextPath}/assets/img/shoe.jpg" alt="" />
                                 <div class="discount">15% OFF</div>
                             </a>
                             <div class="item-info">
                                 <h4 class="item-title">
-                                    <a href="${pageContext.request.contextPath}/Store?action=show">iPhone 6s Plus<br />16GB</a>
+                                    <a href="${pageContext.request.contextPath}/Store?action=show">${product.name}</a>
                                 </h4>
-                                <p class="item-desc">3D Touch. 12MP photos. 4K video.</p>
-                                <div class="item-price">$649.00</div>
-                                <div class="item-discount-price">$739.00</div>
+                                <p class="item-desc">สี ${product.color}</p>
+                                <div class="item-price">${product.price} บาท</div>
+                                <!-- <div class="item-discount-price">$739.00</div> -->
+                                <button class="btn btn-theme btn-block">Add to cart</button>
                             </div>
                         </div>
                         <!-- END item -->
                     </div>
                     <!-- END col-2 -->
-                    <!-- BEGIN col-2 -->
-                    <div class="col-md-2 col-sm-4">
-                        <!-- BEGIN item -->
-                        <div class="item item-thumbnail">
-                            <a href="${pageContext.request.contextPath}/Store?action=show" class="item-image">
-                                <img src="${pageContext.request.contextPath}/assets/img/ipad-pro.png" alt=""  />
-                                <div class="discount">32% OFF</div>
-                            </a>
-                            <div class="item-info">
-                                <h4 class="item-title">
-                                    <a href="product.html">9.7-inch iPad Pro<br />32GB</a>
-                                </h4>
-                                <p class="item-desc">Super. Computer. Now in two sizes.</p>
-                                <div class="item-price">$599.00</div>
-                                <div class="item-discount-price">$799.00</div>
-                            </div>
-                        </div>
-                        <!-- END item -->
-                    </div>
-                    <!-- END col-2 -->
-                    <!-- BEGIN col-2 -->
-                    <div class="col-md-2 col-sm-4">
-                        <!-- BEGIN item -->
-                        <div class="item item-thumbnail">
-                            <a href="${pageContext.request.contextPath}/Store?action=show" class="item-image">
-                                <img src="${pageContext.request.contextPath}/assets/img/imac.png" alt="" />
-                                <div class="discount">20% OFF</div>
-                            </a>
-                            <div class="item-info">
-                                <h4 class="item-title">
-                                    <a href="product.html">21.5-inch iMac<br />with Retina Display</a>
-                                </h4>
-                                <p class="item-desc">Retina. Now in colossal and ginormous.</p>
-                                <div class="item-price">$1,099.00</div>
-                                <div class="item-discount-price">$1,299.00</div>
-                            </div>
-                        </div>
-                        <!-- END item -->
-                    </div>
-                    <!-- END col-2 -->
-                    <!-- BEGIN col-2 -->
-                    <div class="col-md-2 col-sm-4">
-                        <!-- BEGIN item -->
-                        <div class="item item-thumbnail">
-                            <a href="${pageContext.request.contextPath}/Store?action=show" class="item-image">
-                                <img src="${pageContext.request.contextPath}/assets/img/apple-watch.png" alt="" />
-                                <div class="discount">13% OFF</div>
-                            </a>
-                            <div class="item-info">
-                                <h4 class="item-title">
-                                    <a href="product.html">Apple Watch<br />Stainless steel cases</a>
-                                </h4>
-                                <p class="item-desc">You. At a glance.</p>
-                                <div class="item-price">$599.00</div>
-                                <div class="item-discount-price">$799.00</div>
-                            </div>
-                        </div>
-                        <!-- END item -->
-                    </div>
-                    <!-- END col-2 -->
-                    <!-- BEGIN col-2 -->
-                    <div class="col-md-2 col-sm-4">
-                        <!-- BEGIN item -->
-                        <div class="item item-thumbnail">
-                            <a href="${pageContext.request.contextPath}/Store?action=show" class="item-image">
-                                <img src="${pageContext.request.contextPath}/assets/img/macbook-pro.png" alt="" />
-                                <div class="discount">30% OFF</div>
-                            </a>
-                            <div class="item-info">
-                                <h4 class="item-title">
-                                    <a href="product.html">MacBook Pro<br />with Retina Display</a>
-                                </h4>
-                                <p class="item-desc">Stunning Retina Display</p>
-                                <div class="item-price">$1299.00</div>
-                                <div class="item-discount-price">$1499.00</div>
-                            </div>
-                        </div>
-                        <!-- END item -->
-                    </div>
-                    <!-- END col-2 -->
-                    <!-- BEGIN col-2 -->
-                    <div class="col-md-2 col-sm-4">
-                        <!-- BEGIN item -->
-                        <div class="item item-thumbnail">
-                            <a href="${pageContext.request.contextPath}/Store?action=show" class="item-image">
-                                <img src="${pageContext.request.contextPath}/assets/img/apple-tv.png" alt="" />
-                                <div class="discount">40% OFF</div>
-                            </a>
-                            <div class="item-info">
-                                <h4 class="item-title">
-                                    <a href="product.html">Apple Tv<br />32GB</a>
-                                </h4>
-                                <p class="item-desc">The future of television is here.</p>
-                                <div class="item-price">$149.00</div>
-                                <div class="item-discount-price">$249.00</div>
-                            </div>
-                        </div>
-                        <!-- END item -->
-                    </div>
-                    <!-- END col-2 -->
+                    </c:forEach>
                 </div>
                 <!-- END row -->
             </div>

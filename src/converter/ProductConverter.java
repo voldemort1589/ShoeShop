@@ -31,7 +31,7 @@ public class ProductConverter {
 		product.setAmount(Integer.parseInt(String.valueOf(obj.get("amount"))));
 		product.setPrice(Integer.parseInt(String.valueOf(obj.get("price"))));
 		product.setDiscount(Integer.parseInt(String.valueOf(obj.get("discount"))));
-		product.setAdder(String.valueOf(obj.get("adder")));
+//		product.setAdder(obj.get("adder"));
 		return product;
 	}
 }

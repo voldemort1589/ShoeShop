@@ -20,7 +20,7 @@
 		</tr>
 		<c:forEach var="user" items="${listUsers}">
 			<tr>
-				<td><c:out value="${user.id}"></c:out></td>
+				<td>${user.id}</td>
 				<td><c:out value="${user.name}"></c:out></td>
 				<td><c:out value="${user.username}"></c:out></td>
 				<td><c:out value="${user.password}"></c:out></td>

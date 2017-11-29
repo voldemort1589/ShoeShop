@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ProductDAO;
+import dao.ProductDAOImpl;
+import model.Customer;
+import model.Product;
 import model.User;
 
 /**
@@ -16,6 +20,12 @@ import model.User;
  */
 @WebServlet("/Store")
 public class StoreContoller extends HttpServlet {
+	private ProductDAO productDAO;
+	
+	public StoreContoller() {
+		super();
+		this.productDAO = new ProductDAOImpl();
+	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -33,6 +43,10 @@ public class StoreContoller extends HttpServlet {
 					break;
 			}	
 		} else {
+			List<Product> products = this.productDAO.getAllProduct();
+			Customer user = (Customer) request.getSession().getAttribute("userSession");
+			request.setAttribute("listProducts", products);
+			request.setAttribute("user", user);
 			request.getRequestDispatcher("/view/user/store.jsp").forward(request, response);
 		}
 	}

@@ -14,67 +14,43 @@
           </div>
         </div>
         <!-- /.box-header -->
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/Product?action=add">
           <div class="box-body">
-          
-            <div class="form-group">
-              <label for="Product_id" class="col-sm-2 control-label">Product ID</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="Product_id" placeholder="Product id">
-              </div>
-            </div>
             
             <div class="form-group">
               <label for="Product_name" class="col-sm-2 control-label">Product Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="Product_name" placeholder="Product Name">
+                <input type="text" class="form-control" name="name" id="Product_name" placeholder="Product Name">
               </div>
             </div>
             
             <div class="form-group">
               <label for="Product_color" class="col-sm-2 control-label">color</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="Product_color" placeholder="red,green,blue,etc...">
+                <input type="text" class="form-control" name="color" id="Product_color" placeholder="red,green,blue,etc...">
               </div>
             </div>
             
             <div class="form-group">
               <label for="Product_size" class="col-sm-2 control-label">Product Size</label>
               <div class="col-sm-10">
-                <input type="int" class="form-control" id="Product_size" placeholder="42,43,44,etc..">
+                <input type="int" class="form-control" name="size" id="Product_size" placeholder="42,43,44,etc..">
               </div>
             </div>
             
               <div class="form-group">
               <label for="Product_amount" class="col-sm-2 control-label">Product Amount</label>
               <div class="col-sm-10">
-                <input type="int" class="form-control" id="Product_amount" placeholder="Product Amount">
+                <input type="int" class="form-control" name="amount" id="Product_amount" placeholder="Product Amount">
               </div>
             </div>
             
               <div class="form-group">
               <label for="Product_price" class="col-sm-2 control-label">Product Price</label>
               <div class="col-sm-10">
-                <input type="int" class="form-control" id="Product_price" placeholder="Product Price">
+                <input type="int" class="form-control" name="price" id="Product_price" placeholder="Product Price">
               </div>
             </div>
-            
-              <div class="form-group">
-              <label for=Product_discount class="col-sm-2 control-label">Product Discount</label>
-              <div class="col-sm-10">
-                <input type="int" class="form-control" id="Product_discount" placeholder="Product Discount">
-              </div>
-            </div>
-            
-              <div class="form-group">
-              <label for="Product_adder" class="col-sm-2 control-label">Product Adder</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="Product_adder" placeholder="Product Adder">
-              </div>
-            </div>
-            
-
-            
             
           </div>
           <!-- /.box-body -->

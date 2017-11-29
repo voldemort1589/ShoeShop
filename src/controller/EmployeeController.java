@@ -51,7 +51,7 @@ public class EmployeeController extends HttpServlet {
 			this.empDAO.deleteUser(request.getParameter("id"));
 			employees = this.empDAO.getAllUser();
 			request.setAttribute("listUsers", employees);
-			response.sendRedirect(request.getContextPath() + "/User");
+			response.sendRedirect(request.getContextPath() + "/Employee");
 		} else {
 			employees = this.empDAO.getAllUser();
 			request.setAttribute("listUsers", employees);

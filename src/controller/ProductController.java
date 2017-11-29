@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.User;
-import dao.UserDAO;
-import dao.UserDAOImpl;
+import model.Account;
+import model.Product;	
+import dao.ProductDAOImpl;
 
 /**
  * Servlet implementation class UserController
@@ -19,11 +19,11 @@ import dao.UserDAOImpl;
 @WebServlet("/Product")
 public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UserDAO userDAO;
+	private ProductDAOImpl productDAO;
 	
 	public ProductController() {
 		super();
-		this.userDAO = new UserDAOImpl();
+		this.productDAO = new ProductDAOImpl();
 	}
 
 
@@ -45,20 +45,20 @@ public class ProductController extends HttpServlet {
 					request.getRequestDispatcher("/view/admin/product/add.jsp").forward(request, response);
 					break;
 				case "edit":
-					User user = this.userDAO.getUser(request.getParameter("id"));
-					request.setAttribute("user", user);
-					request.getRequestDispatcher("/view/user/editUser.jsp").forward(request, response);
+//					User user = this.userDAO.getUser(request.getParameter("id"));
+//					request.setAttribute("user", user);
+//					request.getRequestDispatcher("/view/user/editUser.jsp").forward(request, response);
 					break;
 				case "delete":
-					this.userDAO.deleteUser(request.getParameter("id"));
-					List<User> users = this.userDAO.getAllUser();
-					request.setAttribute("listUsers", users);
-					response.sendRedirect(request.getContextPath() + "/User");
+					this.productDAO.deleteProduct(request.getParameter("id"));
+					List<Product> products = this.productDAO.getAllProduct();
+					request.setAttribute("listProducts", products);
+					response.sendRedirect(request.getContextPath() + "/Product");
 					break;
 			}	
 		} else {
-			List<User> users = this.userDAO.getAllUser();
-			request.setAttribute("listUsers", users);
+			List<Product> products = this.productDAO.getAllProduct();
+			request.setAttribute("listProducts", products);
 			request.getRequestDispatcher("/view/admin/product/list.jsp").forward(request, response);
 		}
 	}
@@ -71,15 +71,17 @@ public class ProductController extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		User user = new User();
-		user.setId(request.getParameter("id"));
-		user.setName(request.getParameter("name"));
-		user.setUsername(request.getParameter("username"));
-		user.setPassword(request.getParameter("password"));
-		if (user.getId() == null) {
-			this.userDAO.insertUser(user);
+		Product product = new Product();
+		product.setAdder((Account) request.getSession().getAttribute("userSession"));
+		product.setAmount(Integer.parseInt(request.getParameter("amount")));
+		product.setPrice(Integer.parseInt(request.getParameter("price")));
+		product.setSize(Integer.parseInt(request.getParameter("size")));
+		product.setName(request.getParameter("name"));
+		product.setColor(request.getParameter("color"));
+		if (product.getId() == null) {
+			this.productDAO.insertProduct(product);
 		} else {
-			this.userDAO.updateUser(user);
+			this.productDAO.updateProduct(product);
 		}
 		doGet(request, response);
 	}

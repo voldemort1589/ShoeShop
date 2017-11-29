@@ -8,12 +8,12 @@ public class Product {
 	private int amount;
 	private int price;
 	private int discount;
-	private String adder;
+	private Account adder;
 	public Product(){
 		super();
 	}
 	public Product(String id, String name, String color, int size, int amount,
-			int price, int discount, String adder) {
+			int price, int discount, Account adder) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -66,10 +66,10 @@ public class Product {
 	public void setDiscount(int discount) {
 		this.discount = discount;
 	}
-	public String getAdder() {
+	public Account getAdder() {
 		return adder;
 	}
-	public void setAdder(String adder) {
+	public void setAdder(Account adder) {
 		this.adder = adder;
 	}
 }

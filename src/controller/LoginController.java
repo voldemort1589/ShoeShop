@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.mongodb.DBObject;
 
+import converter.CustomerConverter;
 import converter.UserConverter;
 import dao.CusDAO;
 import dao.CusDAOImpl;
@@ -48,7 +49,7 @@ public class LoginController extends HttpServlet {
 		String password = request.getParameter("password");
 		DBObject obj = this.userDAO.authenticate(username, password);
 		if (obj != null) {
-			request.getSession().setAttribute("userSession", UserConverter.toUser(obj));
+			request.getSession().setAttribute("userSession", CustomerConverter.toCustomer(obj));
 			response.sendRedirect(request.getContextPath() + "/Store");
 		} else {
 			request.getSession().setAttribute("message", "Username หรือ Password ไม่ถูกต้อง");

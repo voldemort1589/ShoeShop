@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <t:master>
@@ -18,7 +19,6 @@
           <table class="table table-bordered">
           	<thead>
           		<tr>
-          			<th>#</th>
           			<th>ชื่อ</th>
           			<th>Email</th>
           			<th>เบอร์โทร</th>
@@ -27,14 +27,18 @@
           		</tr>
           	</thead>
           	<tbody>
+          		<c:forEach var="user" items="${listUsers}">
           		<tr>
-          			<td>1</td>
-          			<td>ทดสอบ ทดลอง</td>
-          			<td>todsob@gmail.com</td>
-          			<td>0864251023</td>
-          			<td>68000</td>
-          			<td><a href="#">Edit</a> <a href="#">Delete</a></td>
+          			<td>${user.name}</td>
+          			<td>${user.email}</td>
+          			<td>${user.phone}</td>
+          			<td>${user.salary}</td>
+          			<td>
+          				<a href="${pageContext.request.contextPath}/Employee?action=edit&id=${user.id}">Edit</a>
+          				<a href="${pageContext.request.contextPath}/Employee?action=delete&id=${user.id}" onclick="return confirm('ยืนยันการลบ');">Delete</a>
+          			</td>
           		</tr>
+          		</c:forEach>
           	</tbody>
           </table>
         </div>

@@ -35,7 +35,10 @@
           			<td>${user.address}</td>
           			<td>${user.email}</td>
           			<td>${user.phone}</td>
-          			<td><a href="#">Edit</a> <a href="#">Delete</a></td>
+          			<td>
+          				<a href="${pageContext.request.contextPath}/Customer?action=edit&id=${user.id}">Edit</a> 
+          				<a href="${pageContext.request.contextPath}/Customer?action=delete&id=${user.id}" onclick="return confirm('ยืนยันการลบ');">Delete</a>
+          			</td>
           		</tr>
           		</c:forEach>
           	</tbody>
